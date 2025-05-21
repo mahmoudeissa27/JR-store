@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Store</title>
+    <link rel="stylesheet" href="kids.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <h1><span class="logo-red">JR</span> Store</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">New</a>
+            <a href="man.html">Man</a>
+            <a href="woman.html">Woman</a>
+            <a href="kids.html">Baby & Kids</a>
+            <a href="#">Summer</a>
+            <a href="#">Sale</a>
+        </nav>
+        <div class="nav-icons">
+             <!-- Search Icon -->
+             <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a7 7 0 11-4.9 12.9l-4.4 4.4a1 1 0 01-1.4-1.4l4.4-4.4A7 7 0 0111 4z" />
+          </svg>
+          <!-- Shopping Bag Icon -->
+          <a href="cart.html">
+              <div class="cart">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2m0 0H21m-18 0l1.3 9.8a1 1 0 001 .8h11a1 1 0 001-.8L19 5H5.4m3.6 0a4 4 0 118 0" />
+                  </svg>
+              </a>
+            <!-- User Icon -->
+            <a href="login.html">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 14a4 4 0 00-8 0M12 2a6 6 0 100 12 6 6 0 000-12zM4 20h16a2 2 0 002-2v-1a5 5 0 00-5-5H7a5 5 0 00-5 5v1a2 2 0 002 2z" />
+              </svg>
+          </a>
+        </div>
+    </header>
+
+    <header class="header">
+        <div class="header-content">
+            <img src="photo/kid1.jpg" alt="Left Kid" class="header-image">
+            <h1 class="header-title">Kids</h1>
+            <img src="photo/kid1.jpg" alt="Right Kid" class="header-image">
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" class="category-link">Dresses</a></li>
+                <li><a href="#" class="category-link">Accessories</a></li>
+                <li><a href="#" class="category-link">Baby & Kids</a></li>
+                <li><a href="#" class="category-link">Summer</a></li>
+            </ul>
+
+            
+            <h2>Prices</h2>
+            <ul>
+                <li><input type="checkbox"> Under $50</li>
+                <li><input type="checkbox"> $50 - $100</li>
+                <li><input type="checkbox"> $100 - $200</li>
+                <li><input type="checkbox"> $300 - $400</li>
+            </ul>
+
+            <h2>Colors</h2>
+            <div class="colors">
+                <button class="color black" onclick="filterByColor('black')"></button>
+                <button class="color blue" onclick="filterByColor('blue')"></button>
+                <button class="color green" onclick="filterByColor('green')"></button>
+                <button class="color yellow" onclick="filterByColor('yellow')"></button>
+                <button class="color pink" onclick="filterByColor('pink')"></button>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-grid">
+            <div class="product" data-id="1" data-price="40" data-color="blue">
+                <img src="4.jpg" alt="Product 1">
+                <h2>Product 1</h2>
+                <p class="price">$40</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-price="50"data-color="pink">
+                <img src="sxxs.jpg" alt="Product 2">
+                <h2>Product 2</h2>
+                <p class="price">$50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-price="60"data-color="yellow">
+                <img src="sy.jpg" alt="Product 3">
+                <h2>Product 3</h2>
+                <p class="price">$60</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="1" data-price="40" data-color="green">
+              <img src="1q.jpg" alt="Product 1">
+              <h2>Product 4</h2>
+              <p class="price">$40</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-id="2" data-price="50"data-color="pink">
+              <img src="qa.webp" alt="Product 2">
+              <h2>Product 5</h2>
+              <p class="price">$50</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product" data-id="3" data-price="60" data-color="black">
+              <img src="xz.jpg" alt="Product 3">
+              <h2>Product 6</h2>
+              <p class="price">$60</p>
+              <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </section>
+
+        
+
+    
+<div id="cart-section">
+  <h2>Cart</h2>
+  <ul id="cart-items"></ul>
+  <p id="total-price">Total: $0</p>
+  <button id="clear-cart" class="button-red">Clear Cart</button>
+  <button id="confirm-cart" class="button-green">Confirm</button>
+</div>
+
+
+    <script src="kids.js"></script>
+</body>
+</html>
